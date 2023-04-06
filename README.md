@@ -22,25 +22,25 @@ Flink sink connector for HTTP/HTTPS
             msg_type       VARCHAR,
             card Map<VARCHAR,ARRAY<Map<VARCHAR,VARCHAR>>>
         ) WITH (
-          'connector' = 'http-sink',
-          'url' = 'https://xxxxx/open-apis/message/v4/send/',
-          
-          'format' = 'json',
-          'method' = 'POST',
-          'http.log.success' = 'true',
-          'http.log.fail' = 'true',
-          'http.header.Content-Type' = 'application/json; charset=utf-8',
-        
-           --  是否开启二段 认证，其余参数暂时同主请求
-          'authentication-enabled'='true', --  是否开启
-          'authentication-url' = 'https://xxxxx/open-apis/auth/v3/tenant_access_token/internal/', --  认证url
-          'authentication-res-key' = 'tenant_access_token', --  认证结果中 提取字段，此字段会和authorization-key-prefix拼接后作为  authorization header值
-          'authentication-req-body' = '{
-                "app_id": "XXXX",
-                "app_secret": "XXXXX"
-            }',
-            'authorization-key-prefix' = 'Bearer' --  authorization认证头的前缀 
-)
+                 'connector' = 'http-sink',
+                 'url' = 'https://xxxxx/open-apis/message/v4/send/',
+
+                 'format' = 'json',
+                 'method' = 'POST',
+                 'http.log.success' = 'true',
+                 'http.log.fail' = 'true',
+                 'http.header.Content-Type' = 'application/json; charset=utf-8',
+
+                  --  是否开启二段 认证，其余参数暂时同主请求
+                 'authentication-enabled'='true', --  是否开启
+                 'authentication-url' = 'https://xxxxx/open-apis/auth/v3/tenant_access_token/internal/', --  认证url
+                 'authentication-res-key' = 'tenant_access_token', --  认证结果中 提取字段，此字段会和authorization-key-prefix拼接后作为  authorization header值
+                 'authentication-req-body' = '{
+                       "app_id": "XXXX",
+                       "app_secret": "XXXXX"
+                   }',
+                  'authorization-key-prefix' = 'Bearer' --  authorization认证头的前缀 
+       )
 ;
 ```
 
