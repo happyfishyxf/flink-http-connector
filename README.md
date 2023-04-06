@@ -4,7 +4,7 @@ Flink sink connector for HTTP/HTTPS
 
 * Use Httpclient to connect to the web server.
 * SSL verification shielded when request with https.
-* Two phrased authentication and authorization supported with some options
+* Two phase authentication and authorization supported with some options
 
 
 ## dependencies
