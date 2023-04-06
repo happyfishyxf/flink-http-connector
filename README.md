@@ -7,7 +7,7 @@ Flink sink connector for HTTP/HTTPS
 * Two phase authentication and authorization supported with some options
 
 
-## dependencies
+## Dependencies
 * Java 8+
 * Maven 3+
 * Flink 1.12+
