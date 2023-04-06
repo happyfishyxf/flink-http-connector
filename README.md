@@ -52,8 +52,8 @@ Flink sink connector for HTTP/HTTPS
 | url                      | required | The base URL that should be use for HTTP requests. For example _http(s)://localhost:8080/client_.                   |
 | format                   | required | Can only be _'json'_.                                                                                               |
 | method                   | required | Specify which HTTP method to use in the request. The value should be set either to `GET`,`DELETE`, `POST` or `PUT`. |
-| http.log.fail            | optional | `true` or `false`, default be `true`, When response status != 200, log error msg.                                   |
-| http.log.success         | optional | `true` or `false`, default be `false`, When response status == 200, log response body.                              |
+| http.log.fail            | optional | `true` or `false`, default  `true`, When response status != 200, log error msg.                                   |
+| http.log.success         | optional | `true` or `false`, default  `false`, When response status == 200, log response body.                              |
 | http.header.*            | optional | any http/https header is supported                                                                                  |
 | authentication-enabled   | optional | `true` or `false`, default `false`, whether authentication enabled or not                                           |
 | authentication-url       | optional | The base URL that should be use for authentication requests ,required when authentication enabled                   |
